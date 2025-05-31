@@ -140,7 +140,9 @@ html {
   border: none;
   cursor: pointer;
 }
-
+.btn > a {
+  color: #fff;
+}
 .btn.secondary {
   background: transparent;
   border: 1px solid var(--font-color);
