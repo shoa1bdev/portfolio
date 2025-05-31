@@ -339,7 +339,7 @@ footer {
 }
 
 footer #logo {
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: bold;
   font-style: normal;
 }
@@ -420,5 +420,19 @@ footer #logo {
   .contacts {
     flex-direction: column;
     gap: 50px;
+  }
+  footer {
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+  .footer-left > #logo {
+    font-size: 12px;
+  }
+  .footer-icons {
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
