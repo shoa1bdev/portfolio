@@ -140,7 +140,7 @@ html {
   border: none;
   cursor: pointer;
 }
-.btn > a {
+.col {
   color: #fff;
 }
 .btn.secondary {
