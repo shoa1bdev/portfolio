@@ -1,0 +1,273 @@
+.blog {
+    padding-top: 120px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+.post {
+    flex-direction: row;
+}
+  .posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: flex-start;
+  }
+  
+  .post-box {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+  }
+  .post-box:hover {
+    transform: translateY(-5px);
+  }
+
+.post-image-preview {
+  height: 120px;
+}
+  .post-image > img {
+    width: 100%;
+
+  } 
+  .post-title {
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: #333;
+  }
+  .post-title > a:hover {
+    text-decoration: underline;
+  }
+/* General container for the blog page */
+.container {
+  display: flex; /* Use flexbox for main layout */
+  gap: 2rem; /* Space between TOC and blog post */
+  padding: 2rem; /* Overall padding for the container */
+  max-width: 1200px; /* Limit overall width on large screens */
+  margin: 0 auto; /* Center the container */
+  align-items: flex-start; /* Align items to the top */
+}
+
+/* Main blog post article styling */
+.blog-post {
+  flex-grow: 1; /* Allows the article to take up available space */
+  background-color: var(--primary-color); /* Assuming --primary-color is defined */
+  padding: 2rem; /* Consistent padding inside the article */
+  border-radius: 12px; /* More prominent rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Enhanced shadow for depth */
+  width: 100%; /* Default to full width on smaller screens */
+  max-width: 800px; /* Limit article width on very large screens */
+  background-color: var(--secondary-color);
+}
+
+/* Header section of the blog post (title and date) */
+.blog-post .title { /* Targeting the header with class 'title' inside blog-post */
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem; /* Increased padding for better separation */
+  margin-bottom: 2.5rem; /* Increased margin for better separation */
+}
+
+.blog-post .title h1 { /* Specific style for the main post title */
+  font-weight: 700;
+  font-size: 2.5rem; /* Larger title for impact */
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  color: #222; /* Slightly darker for better contrast */
+}
+
+.post-date {
+  font-size: 0.95rem; /* Slightly larger for readability */
+  color: #777;
+  font-weight: 500;
+}
+
+/* Figure containing the post image and caption */
+.post-figure {
+  margin: 0 0 2.5rem 0; /* Adjusted margin */
+  text-align: center;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block; /* Ensures no extra space below image */
+  object-fit: cover; /* Ensures image covers the area without distortion */
+}
+
+.post-caption {
+  margin-top: 0.8rem; /* Adjusted margin */
+  font-size: 0.88rem; /* Slightly larger */
+  color: #888; /* Slightly darker for better readability */
+  font-style: italic;
+}
+
+/* Styling for content sections within the blog post */
+.blog-post section h2 { /* Targeting h2 within sections of blog-post */
+  font-size: 1.8rem; /* Larger and more prominent section titles */
+  color: #333;
+  margin-top: 2.5rem; /* More space above headings */
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem; /* Little underline effect */
+  border-bottom: 1px solid #f0f0f0; /* Subtle separator */
+}
+
+.blog-post section p { /* Targeting paragraphs within sections of blog-post */
+  font-size: 1.05rem; /* Larger base font size for body text */
+  line-height: 1.7; /* Improved line height for readability */
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+/* Post navigation (e.g., back to blog link) */
+.post-navigation {
+  margin-top: 3.5rem; /* Increased margin */
+  border-top: 1px solid #eee;
+  padding-top: 2rem; /* Increased padding */
+  text-align: left;
+}
+
+.back-link {
+  color: #0073e6;
+  font-weight: 600;
+  font-size: 1.05rem; /* Slightly larger */
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.back-link:hover {
+  border-color: #0073e6;
+  color: #005bb5; /* Slightly darker blue on hover */
+}
+
+/* Table of Contents (TOC) styling */
+.toc {
+  position: sticky;
+  top: 4.5rem;
+  align-self: flex-start; /* Sticks to the top of the viewport */
+  width: 300px; /* Fixed width for TOC on desktop */
+  min-width: 250px; /* Minimum width to prevent squishing */
+  background: #fff;
+  padding: 1.5rem; /* Increased padding */
+  border: 1px solid #eee;
+  border-radius: 12px; /* Consistent rounded corners */
+  height: fit-content; /* Only takes up necessary height */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06); /* Subtle shadow */
+  flex-shrink: 0; /* Prevents TOC from shrinking */
+}
+
+.toc h3 {
+  font-size: 1.2rem; /* Larger TOC title */
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd; /* Slightly darker border */
+  padding-bottom: 0.5rem;
+  color: #333;
+}
+
+.toc ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.toc li {
+  margin: 0.7rem 0; /* More vertical spacing */
+}
+
+.toc a {
+  color: #0073e6;
+  text-decoration: none;
+  font-size: 0.98rem; /* Slightly larger */
+  transition: color 0.2s ease;
+}
+
+.toc a:hover {
+  color: #005bb5; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .container {
+    padding: 1.5rem; /* Reduce padding on slightly smaller screens */
+    gap: 1.5rem;
+  }
+
+  .blog-post .title h1 {
+    font-size: 2.2rem; /* Adjust title size */
+  }
+
+  .blog-post section h2 {
+    font-size: 1.6rem; /* Adjust section heading size */
+  }
+
+  .blog-post section p {
+    font-size: 1rem; /* Adjust body text size */
+  }
+
+  .toc {
+    width: 250px; /* Smaller fixed width for TOC */
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column; /* Stack TOC and blog post vertically */
+    padding: 1rem; /* Further reduce padding */
+  }
+
+  .toc {
+    display: none; /* Hide TOC on smaller screens */
+    /* If you want to show a mobile TOC, you'd implement a toggle here */
+  }
+
+  .blog-post {
+    padding: 1.5rem; /* Adjust padding for mobile */
+    border-radius: 8px; /* Smaller border radius for mobile */
+    box-shadow: none; /* Remove shadow on mobile for cleaner look */
+    max-width: 100%; /* Ensure it takes full width */
+  }
+
+  .blog-post .title h1 {
+    font-size: 2rem; /* Smaller title for mobile */
+  }
+
+  .blog-post section h2 {
+    font-size: 1.4rem; /* Smaller section headings for mobile */
+    margin-top: 2rem;
+  }
+
+  .blog-post section p {
+    font-size: 0.95rem; /* Smaller body text for mobile */
+    line-height: 1.6;
+  }
+
+  .post-navigation {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-post {
+    padding: 1rem; /* Even smaller padding for very small screens */
+  }
+
+  .blog-post .title h1 {
+    font-size: 1.8rem; /* Further reduce title size */
+  }
+
+  .blog-post section h2 {
+    font-size: 1.3rem; /* Further reduce section heading size */
+  }
+}
+  
