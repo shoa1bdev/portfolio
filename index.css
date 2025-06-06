@@ -435,6 +435,9 @@ footer #logo {
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
   }
+  .first {
+    height: 100vh;
+  }
   .second {
     height: 1040px;
   }
