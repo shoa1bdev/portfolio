@@ -395,6 +395,7 @@ footer #logo {
 @media (max-width: 768px) {
   #home {
     padding-top: 100px ;
+    height: 100vh;
   }
   .intro-text {
     width: 90%;
@@ -405,7 +406,6 @@ footer #logo {
     gap: 5px;
     cursor: pointer;
   }
-
   .hamburger span {
     width: 25px;
     height: 3px;
@@ -436,7 +436,7 @@ footer #logo {
     border-bottom-right-radius: 100px;
   }
   .first {
-    height: 100vh;
+    height: 90vh;
   }
   .second {
     height: 1040px;
