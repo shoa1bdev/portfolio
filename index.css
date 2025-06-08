@@ -4,8 +4,8 @@
   --primary-color: #f7f7f7;
   --secondary-color: #fff;
   --font-color: #2d2d2d;
-  --light-black: #eeeeec;
-  --primary: rgb(173, 70, 70);
+  --light-black: #f8f8f8;
+  --primary: #2d2d2d;
 }
 
 * {
@@ -21,7 +21,9 @@ a {
   text-decoration: none;
   color: #000;
 }
-
+a:hover {
+  text-decoration: underline;
+}
 ::-webkit-scrollbar {
   width: 10px;
   background: var(--secondary-color);
@@ -35,9 +37,9 @@ body,
 html {
   width: 100%;
   height: 100%;
-  background: var(--primary-color);
   color: #000;
   scroll-behavior: smooth;
+  background-color: var(--light-black);
 }
 
 .container {
@@ -53,15 +55,14 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 82vh;
-  background: rgb(173, 70, 70);
+  height: 700px;
+  background: var(--primary);
   border-bottom-right-radius: 20%;
   border-bottom-left-radius: 20%;
 }
 .second {
-  top: 550px;
   background-color: #fff;
-  height: 68vh;
+  top:450px
 }
 .third {
   top: 1500px;
@@ -86,7 +87,7 @@ html {
   padding: 15px 20px;
   flex-wrap: wrap;
   gap: 10px;
-  background: rgb(173, 70, 70);
+  background: var(--primary);
   color: white;
 }
 .nav {
@@ -97,10 +98,8 @@ html {
   justify-content: space-between;
   padding: 0 10px;
 }
-#logo {
-  font-style: italic;
-}
 #logo > a {
+  font-style: italic;
   color: var(--light-black);
 }
 .navlinks {
@@ -117,7 +116,7 @@ html {
 }
 
 .navlink > a:hover {
-  color: var(--font-color);
+  text-decoration: underline;
 }
 
 #home {
@@ -150,7 +149,7 @@ html {
   object-fit: cover;
 }
 .intro-text {
-  width: 60%;
+  width: 80%;
   text-align: center;
   font-size: 18px;
   color: var(--light-black);
@@ -158,7 +157,6 @@ html {
 
 .name {
   font-size: 3rem;
-  color: var(--light-black);
 }
 
 .btns-container {
@@ -171,17 +169,23 @@ html {
 .btn {
   padding: 15px 25px;
   font-size: 1rem;
-  background-color: var(--font-color);
+  background-color: var(--secondary-color);
+  color:var(--primary);
   border: none;
   cursor: pointer;
-  border-radius: 50px;
+  border-radius: 30px;
+  transition: all 0.25s ease;
 }
-.col {
-  color: #fff;
+.btn:hover,
+.social > a > i:hover,
+.contact-btn:hover
+ {
+  transform: translateY(-5px);
 }
+
 .btn.secondary {
   background: transparent;
-  border: 1px solid var(--font-color);
+  border: 1px solid var(--light-black);
   color: var(--primary-color);
 }
 
@@ -198,6 +202,7 @@ html {
 }
 .social > a > i {
   color: var(--primary-color);
+  transition: all 0.25s ease;
 }
 
 #about {
@@ -207,7 +212,7 @@ html {
 
 #about > h2,
 #services > h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -270,7 +275,7 @@ html {
 #services {
   width: 100%;
   padding: 30px 0;
-  scroll-margin-top: 200px;
+  scroll-margin-top: 60px;
 }
 
 .services-scroll-container {
@@ -313,7 +318,7 @@ html {
   flex-direction: column;
   align-items: center;
   gap: 60px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 100px 0 50px 0;
 }
 
@@ -328,11 +333,22 @@ html {
   text-align: center;
 }
 
-.contacts > button {
+.contact-btn {
+  font-size: 16px;
+  background-color: var(--primary);
+  color: #fff;
+  width: 180px;
+  padding: 15px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   font-size: 18px;
+  border-radius: 30px;
+  transition: all 0.25s ease;
+}
+.contact-btn > i {
+  color: #fff;
 }
 
 footer {
@@ -366,20 +382,39 @@ footer #logo {
 .footer-icons a:hover {
   color: white;
 }
-
-/* Responsive Styles */
-@media (max-width: 992px) {
+@media (max-width: 1260px) {
+  .about-me {
+    width: 80%;
+    text-align: justify;
+    font-size: 16px;
+  }
   .about-content {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-
-  .about-me {
-    width: 90%;
-    text-align: justify;
+  .third {
+    top: 1490px;
+    height: 900px;
   }
+  .service-box {
+    align-items: center;
+  }
+}
 
+
+/* Responsive Styles */
+@media (max-width: 1079px) {
+  .intro-text {
+    font-size: 16px;
+    width: 90%;
+  }
+  .name {
+    font-size: 2.5rem;
+  }
+  .about-me { 
+    width: 90%;
+  }
   .certificates {
     width: 80%;
     max-width: 300px;
@@ -389,19 +424,39 @@ footer #logo {
     flex-direction: column;
     align-items: center;
   }
+  .first {
+    height: 750px;
+  }
+  .second {
+    top: 500px;
+  }
+  .third {
+    top: 1800px;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 789px) {
+  body,
+  html {
+    background-color: var(--secondary-color);
+  }
   #home {
     padding-top: 100px;
     padding-bottom: 100px;
   }
-  .intro-text {
+  #about > h2 {
+    font-size: 2rem;
+  }
+  .about-me {
     width: 90%;
+    font-size: 14px;
+  }
+  .intro-text {
+    width: 100%;
     font-size: 16px;
   }
-  #name {
-    font-size: 1.2rem;
+  .name {
+    font-size: 2.2rem;
   }
   .hamburger {
     display: flex;
@@ -412,7 +467,7 @@ footer #logo {
   .hamburger span {
     width: 25px;
     height: 3px;
-    background-color: #000;
+    background-color: #fff;
     border-radius: 2px;
     transition: all 0.3s ease;
   }
@@ -440,17 +495,11 @@ footer #logo {
     border-bottom-right-radius: 100px;
   }
   .first {
-    height: 800px
+    height: 680px
   }
+  .third,
   .second {
-    height: 1040px;
-  }
-  .third {
-    top: 2800px;
-    height: 2500px;
-    border-radius: 0;
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
+    display: none;
   }
   .navlinks.active {
     display: flex;
@@ -482,5 +531,10 @@ footer #logo {
   }
   .service-box i {
     font-size: 2.2rem;
+  }
+}
+@media (max-width: 375px) {
+  .first {
+    height: 730px;
   }
 }
