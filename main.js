@@ -1,18 +1,22 @@
-const hamburger = document.getElementById('hamburger');
+document.addEventListener('DOMContentLoaded', () => {
+  // ✅ Handle Hamburger toggle if present
+  const hamburger = document.getElementById('hamburger');
   const navlinks = document.getElementById('navlinks');
 
-  hamburger.addEventListener('click', () => {
-    navlinks.classList.toggle('active');
-  });
+  if (hamburger && navlinks) {
+    hamburger.addEventListener('click', () => {
+      navlinks.classList.toggle('active');
+    });
+  }
 
-const backgroundShape = document.getElementById('second')
-const aboutMe = document.getElementById('about-me')
-
-// function matchHeight() {
-//   const olHeight = aboutMe.offsetHeight * 1.3;
-//     backgroundShape.style.height = `${olHeight}px`;
-//     console.log(olHeight)
-//   }
-
-//   window.addEventListener('load', matchHeight);
-//   window.addEventListener('resize', matchHeight);
+  // ✅ Handle Logo click if present
+  const logoImgs = document.querySelectorAll('.logoImg');
+  if (logoImgs.length > 0) {
+    logoImgs.forEach(img => {
+      img.addEventListener('click', () => {
+        window.location.href = '/index.html';
+        console.log('click');
+      });
+    });
+  }
+});
