@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (logoImgs.length > 0) {
     logoImgs.forEach(img => {
       img.addEventListener('click', () => {
-        window.location.href = '/index.html';
+        window.location.href = 'index.html';
         console.log('click');
       });
     });
