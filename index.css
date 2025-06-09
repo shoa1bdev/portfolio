@@ -101,6 +101,7 @@ html {
 #logo > a {
   font-style: italic;
   color: var(--light-black);
+  text-decoration: none;
 }
 .navlinks {
   display: flex;
