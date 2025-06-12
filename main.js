@@ -17,11 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentUrl = window.location.href;
         if (currentUrl.includes('/blog/')) {
         // We are in blog/ folder
-        window.location.href = '/portfolio/index.html';
+        window.location.href = '/';
       } else if (currentUrl.includes('/work')) {
-        window.location.href = '/portfolio/work.html';
+        window.location.href = '/';
       } else {
-        window.location.href = 'index.html';
+        window.location.href = '/';
       }
       });
     });
