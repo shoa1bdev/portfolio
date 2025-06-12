@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="work.css" />
     <script src="https://kit.fontawesome.com/615d6f4881.js" crossorigin="anonymous"></script>
     <script src="main.js" defer></script>
-    <base href="/portfolio/">
+    <!-- <base href="/portfolio/"> -->
   </head>
   <body>
     <div class="bg-gradient first"></div>
@@ -43,7 +43,8 @@
           <li class="navlink home"><a href="#home">Home</a></li>
           <li class="navlink about"><a href="#about">About</a></li>
           <li class="navlink services"><a href="#services">Services</a></li>
-          <li class="navlink contact"><a href="#contact">Contact</a></li>
+          <li class="navlink services"><a href="#testimonials">Testimonials</a></li>
+          <li class="navlink contact"><a href="#contacts">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -65,7 +66,7 @@
           <a target="_blank" href="https://wa.me/+918017117958" class="btn secondary">Let's Talk</a>
         </div>
         <div class="icons social">
-          <a href="https://www.linkedin.com/in/realshoaib" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.linkedin.com/company/growwithshoby" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
           <a href="https://twitter.com/ishoa1b" target="_blank"><i class="fa-brands fa-twitter"></i></a>
           <a href="https://www.facebook.com/people/Growwithshoby/61575839828906/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
           <a href="https://instagram.com/growwithshoby" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -78,6 +79,18 @@
           <p>GrowWithShoby was founded by <a href="./index.html">Shoaib Akhtar</a> — a passionate digital marketer, web developer, and designer from Kolkata. What started as a solo hustle during lockdown has evolved into a mission to empower small businesses with smart, creative, and honest digital marketing services.</p>
         </div>
       </section>
+      <section id="founder" class="founder-intro">
+      <div class="founder-container">
+        <div class="founder-text">
+          <h3>Meet the Founder</h3>
+          <p>
+            Hey, I'm Shoaib — a self-taught digital marketer, front-end developer, and graphic designer. I started this journey during the 2020 lockdown with nothing but curiosity and passion. Coming from a commerce background, I taught myself everything from scratch and built real projects along the way.
+          </p>
+          <a href="https://shoa1bdev.github.io/portfolio/#home" class="founder-btn btn" target="_blank">View Portfolio</a>
+        </div>
+      </div>
+    </section>
+
 
       <section id="services">
         <h2>What We Do</h2>
@@ -114,23 +127,71 @@
           </div>
         </div>
       </section>
+      <!-- TESTIMONIALS SECTION -->
+      <section id="testimonials" class="testimonials-section">
+        <h2>What Clients Say</h2>
+        <p class="section-subtext">Real results. Real feedback.</p>
 
-      <section id="contact">
-        <h2>Let’s Connect</h2>
-        <p>Got a project in mind or just want to say hi? Reach out!</p>
-        <div class="contacts">
-          <a href="https://wa.me/+918017117958" class="contact-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-          <a href="mailto:growwithshoby@gmail.com" class="contact-btn"><i class="fa-solid fa-envelope"></i> Email</a>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <p>"Shoaib’s SEO strategy helped our website climb to the first page in just 3 months. Highly recommend his expertise!"</p>
+            <h4>- Aman Gupta</h4>
+            <span>Owner, BakeLove Kolkata</span>
+          </div>
+
+          <div class="testimonial-card">
+            <p>"Our Instagram blew up after Shoaib's campaign. We got 3x the leads we were getting before!"</p>
+      <h4>- Riya Sen</h4>
+            <span>Founder, Urban Threads</span>
+      </div>
+
+          <div class="testimonial-card">
+            <p>"He completely transformed our outdated tuition website. We started getting inquiries every single day!"</p>
+            <h4>- Mr. Roy</h4>
+            <span>Director, LearnWell Tuition</span>
+          </div>
         </div>
       </section>
-    </main>
+      <section id="contacts" class="contact-section">
+        <h2 class="form-title">Work Enquiry</h2>
+        <form action="https://formspree.io/f/YOUR_ID" method="POST" class="enquiry-form">
+            <div class="form-row two-cols">
+              <div class="form-group">
+                <label for="name">Name*</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+             <label for="service">Service*</label>
+             <select id="service" name="service" required>
+               <option value="">Select a service</option>
+               <option>SEO</option>
+               <option>Social Media Marketing</option>
+               <option>Graphic Design</option>
+               <option>Web Design</option>
+               <option>Other</option>
+             </select>
+            </div>
 
+            <div class="form-group">
+             <label for="message">Message*</label>
+             <textarea id="message" name="message" rows="4" placeholder="Tell me about your project..." required></textarea>
+           </div>
+
+          <button type="submit" class="submit-btn btn">Send Enquiry</button>
+        </form>
+    </section>
+    </main>
     <footer>
       <div class="footer-left">
         <span id="logo">© 2025 | GrowWithShoby</span>
       </div>
       <div class="footer-icons">
-        <a href="https://www.linkedin.com/in/realshoaib/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/company/growwithshoby/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
         <a href="https://twitter.com/ishoa1b" target="_blank"><i class="fa-brands fa-twitter"></i></a>
         <a href="https://www.facebook.com/people/Growwithshoby/61575839828906/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         <a href="https://instagram.com/growwithshoby" target="_blank"><i class="fa-brands fa-instagram"></i></a>
