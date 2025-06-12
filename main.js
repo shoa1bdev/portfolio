@@ -14,8 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (logoImgs.length > 0) {
     logoImgs.forEach(img => {
       img.addEventListener('click', () => {
+        const currentUrl = window.location.href;
+        if (currentUrl.includes('/blog/')) {
+        // We are in blog/ folder
+        window.location.href = '/portfolio/index.html';
+      } else {
         window.location.href = 'index.html';
-        console.log('click');
+      }
       });
     });
   }
