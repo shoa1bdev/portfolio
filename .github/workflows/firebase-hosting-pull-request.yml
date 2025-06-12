@@ -19,7 +19,7 @@ jobs:
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          repoToken: ''
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_GROWWITH_SHOBY }}
           projectId: growwith-shoby
           channelId: pr-${{ github.event.pull_request.number }}
