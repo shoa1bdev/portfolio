@@ -6,27 +6,37 @@ footer,
 .founder-btn,
 .contacts > a,
 .submit-btn {
+  background-color: #33443a;
+}
+.btn {
   background-color: #38A460;
 }
-
 /* Section Spacing */
 #founder,
 #services,
 #testimonials {
   margin-bottom: 100px;
 }
+.about-content > p > a {
+  color: #fff;
+  text-decoration: underline;
+}
+.about-content > p > a:hover {
+  color: #38A460;
+  text-decoration: underline;
+}
 
 /* Founder Section */
 .founder-container {
   margin: 0 auto;
-  text-align: center;
-  background-color: #ffefe7;
+  text-align: center; 
   padding: 20px;
 }
 
 .founder-intro {
   border-radius: 12px;
   margin-top: 40px;
+  background-color: #33443a;
 }
 
 .founder-intro h3 {
@@ -38,7 +48,7 @@ footer,
 
 .founder-intro p {
   font-size: 1rem;
-  color: #444;
+  color: #38A460;
   margin-bottom: 24px;
   line-height: 1.6;
 }
@@ -47,14 +57,12 @@ footer,
 .submit-btn {
   display: inline-block;
   padding: 12px 24px;
-  color: white;
   font-weight: 500;
-  transition: background-color 0.3s ease;
   max-width: 180px;
 }
 
 .submit-btn:hover {
-  background-color: #38A460;
+  background-color: #33443a;
 }
 
 /* Testimonials */
@@ -118,7 +126,6 @@ h2,
 .contact-section {
   width: 100%;
   padding: 60px 20px;
-  background-color: #f9f9f9;
 }
 
 .enquiry-form {
@@ -153,17 +160,23 @@ h2,
 .form-group textarea {
   padding: 12px 15px;
   font-size: 16px;
-  border: 1px solid #ddd;
+  border: 1px solid #38A460;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: #33443a;
+  color: #fff;
   outline: none;
   transition: border-color 0.3s ease;
+}
+.form-group input::placeholder,
+.form-group select::placeholder,
+.form-group textarea::placeholder {
+  color: #fff;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  border-color: #38A460;
+  border-color: #33443a;
 }
 
 /* Responsive */

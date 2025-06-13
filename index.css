@@ -4,7 +4,7 @@
   --primary-color: #f7f7f7;
   --secondary-color: #fff;
   --font-color: #2d2d2d;
-  --light-black: #f8f8f8;
+  --light-black: #d4d4d4;
   --primary: #2d2d2d;
 }
 
@@ -15,7 +15,7 @@
   font-family: "Poppins", sans-serif;
 }
 i {
-  color: var(--primary);
+  color: var(--light-black);
 }
 a {
   text-decoration: none;
@@ -37,9 +37,9 @@ body,
 html {
   width: 100%;
   height: 100%;
-  color: #000;
+  color: var(--light-black);
   scroll-behavior: smooth;
-  background-color: var(--light-black);
+  background-color: var(--primary);
 }
 
 .container {
@@ -57,20 +57,18 @@ html {
   width: 100%;
   height: 700px;
   background: var(--primary);
-  border-bottom-right-radius: 20%;
-  border-bottom-left-radius: 20%;
+  border-radius: 0px 0px 150px 150px / 0px 0px 75px 75px;
 }
 .second {
-  background-color: #fff;
+  background-color: #3d3d3d;
   top:450px
 }
 .third {
-  top: 1500px;
-  height: 1200px;
+  top: 1540px;
+  height: 1240px;
   border-radius: 0;
-  border-top-left-radius: 20%;
-  border-top-right-radius: 20%;
-  background-color: #fff;
+  border-radius: 150px 150px 0px 0px / 75px 75px 0px 0px;
+  background-color: #3d3d3d;
   z-index: -1;
 }
 .nav-bar {
@@ -224,10 +222,12 @@ html {
 
 #about > h2,
 #services > h2,
-#contacts > h2 {
-  font-size: 2.2rem;
+#contacts > h2,
+.qualifications > h2 {
+  font-size: 2rem;
   text-align: center;
   margin-bottom: 25px;
+  color: var(--light-black);
 }
 
 .about-content {
@@ -241,12 +241,13 @@ html {
 .about-me {
   padding-top: 20px;
   flex: 1 1 60%;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.5;
   text-align: justify;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  color: var(--light-black);
 }
 
 .qualifications {
@@ -254,7 +255,8 @@ html {
   flex-direction: column;
   align-items: center;
   gap: 25px;
-  padding-top: 80px;
+  padding-top: 140px;
+  
 }
 
 .certifications {
@@ -290,7 +292,9 @@ html {
   padding: 30px 0;
   scroll-margin-top: 60px;
 }
-
+.about-content > section {
+  padding-top: 50px ;
+}
 .services-scroll-container {
   display: flex;
   flex-wrap: wrap;
@@ -350,8 +354,8 @@ html {
   font-size: 16px;
   background-color: var(--primary);
   color: #fff;
-  width: 180px;
-  padding: 15px;
+  width: 250px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -361,11 +365,11 @@ html {
   transition: all 0.25s ease;
 }
 .contact-btn > i {
-  color: #fff;
+  color: var(--light-black);
 }
 
 footer {
-  background-color: var(--light-black);
+  background-color: var(--primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -407,8 +411,8 @@ footer #logo {
     text-align: center;
   }
   .third {
-    top: 1490px;
-    height: 900px;
+    top: 1560px;
+    height: 1260px;
   }
   .service-box {
     align-items: center;
@@ -417,7 +421,7 @@ footer #logo {
 
 
 /* Responsive Styles */
-@media (max-width: 1079px) {
+@media (max-width: 1160px) {
   .intro-text {
     font-size: 16px;
     width: 90%;
@@ -441,21 +445,25 @@ footer #logo {
     height: 750px;
   }
   .second {
-    top: 500px;
+    top: 550px;
   }
   .third {
-    top: 1800px;
+    top: 1900px;
+    height: 1500px;
   }
 }
 
-@media (max-width: 789px) {
-  body,
-  html {
-    background-color: var(--secondary-color);
+@media (max-width: 860px) {
+  .container { 
+    padding: 0;
   }
-  #home {
-    padding-top: 100px;
-    padding-bottom: 100px;
+  #home,
+  #about {
+    padding: 100px 10px 0 10px;
+    margin-bottom: 0;
+  }
+  .qualifications {
+    padding-top:100px ;
   }
   #about > h2 {
     font-size: 2rem;
@@ -503,16 +511,28 @@ footer #logo {
     box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px,
       rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
   }
-  .bg-gradient {
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
-  }
   .first {
-    height: 680px
+    height: 680px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   }
   .third,
   .second {
     display: none;
+  }
+  #services, #contact{
+    background-color: #3d3d3d;
+    padding: 0 10px 0 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #services {
+    border-radius: 150px 150px 0px 0px / 75px 75px 0px 0px;
+  }
+  .contact-text {
+    padding-top: 25px;
+  }
+  #services > h2 {
+    padding-top: 25px ;
   }
   .navlinks.active {
     display: flex;
@@ -524,10 +544,10 @@ footer #logo {
     font-size: 1.3rem;
   }
   footer {
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding: 10px;
+    padding: 10px 25px 10px 25px;
     position: relative;
     bottom: 0;
   }
@@ -546,8 +566,16 @@ footer #logo {
     font-size: 2.2rem;
   }
 }
-@media (max-width: 375px) {
+
+@media (max-width: 479px) {
   .first {
-    height: 730px;
+    height: 720px;
+  }
+  #home {
+    padding-top: 90px;
+  }
+  .intro-text {
+    font-size: 1rem;
+    
   }
 }
