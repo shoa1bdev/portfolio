@@ -13,6 +13,17 @@
       { "source": "/blog/post2", "destination": "/blog/post2.html" },
       { "source": "404", "destination": "/404.html" },
       { "source": "**", "destination": "/index.html" }
+    ],
+    "headers": [
+      {
+        "source": "/sitemap.xml",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml"
+          }
+        ]
+      }
     ]
   }
 }
