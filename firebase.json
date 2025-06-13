@@ -1,13 +1,10 @@
 {
   "hosting": {
     "public": ".",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "redirects": [
-      {
-        "source": "/",
-        "destination": "https://growwith-shoby.web.app",
-        "type": 301
-      }
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
     ],
     "rewrites": [
       { "source": "/about", "destination": "/about.html" },
