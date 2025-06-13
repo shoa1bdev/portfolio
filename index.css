@@ -96,9 +96,9 @@ html {
   justify-content: space-between;
   padding: 0 10px;
 }
-#logo > h1 > a {
+#logo > h2 > a {
   font-style: italic;
-  color: var(--light-black);
+  color: #fff;
   text-decoration: none;
   font-size: 22px;
 }
