@@ -178,7 +178,9 @@ h2,
 .form-group textarea:focus {
   border-color: #33443a;
 }
-
+.about-content {
+  padding-top: 20px ;
+}
 /* Responsive */
 @media (max-width: 768px) {
   .form-row.two-cols {
