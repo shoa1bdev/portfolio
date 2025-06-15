@@ -19,10 +19,6 @@
     ],
     "rewrites": [
       { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
-      { "source": "/blog", "destination": "/blog.html" },
-      { "source": "/work", "destination": "/work.html" },
-      { "source": "/blog/post1", "destination": "/blog/post1.html" },
-      { "source": "/blog/post2", "destination": "/blog/post2.html" },
       { "source": "/404", "destination": "/404.html" },
       { "source": "**", "destination": "/index.html" }
     ]
