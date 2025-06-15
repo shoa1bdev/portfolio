@@ -8,7 +8,7 @@
     ],
     "headers": [
       {
-        "source": "/sitemap",
+        "source": "/sitemap.xml",
         "headers": [
           {
             "key": "Content-Type",
@@ -18,6 +18,7 @@
       }
     ],
     "rewrites": [
+      { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
       { "source": "/blog", "destination": "/blog.html" },
       { "source": "/work", "destination": "/work.html" },
       { "source": "/blog/post1", "destination": "/blog/post1.html" },
